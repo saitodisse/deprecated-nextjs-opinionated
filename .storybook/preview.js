@@ -1,15 +1,10 @@
-import '../styles/index.css'
 
-import React from 'react'
-import { addDecorator } from '@storybook/react'
-// import { info } from '@storybook/addon-info'
-import Layout from './Layout'
-addDecorator((storyFn) => <Layout>{storyFn()}</Layout>)
-// addDecorator(
-//   info({
-//     inline: true,
-//     propTablesExclude: [Layout],
-//   })
-// )
-
-import '../styles/index.css'
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+}
